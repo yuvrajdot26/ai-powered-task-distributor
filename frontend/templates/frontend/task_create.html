@@ -6,7 +6,11 @@
 
 <div class="card form-card">
 <div class="card-body">
-
+{% if error %}
+    <div class="alert alert-danger">
+        {{ error }}
+    </div>
+{% endif %}
 <form method="post">
 
     {% csrf_token %}
